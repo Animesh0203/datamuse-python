@@ -32,18 +32,6 @@ Retrieves words that sound similar to a given word using the Datamuse API.
 **Returns:**
 - `str`: A space-separated string of words that sound similar.
 
-## nouns_described_by_adjective (Deprecated)
-Retrieves nouns commonly described by a given adjective using the Datamuse API.
-
-**Args:**
-- `adjective` (str): The adjective to find associated nouns for.
-
-**Returns:**
-- `str`: A space-separated string of associated nouns.
-
-**Note:**
-This function is deprecated. Please use 'getNounsMatchingAdjective' instead.
-
 ## getNounsMatchingAdjective
 Retrieves nouns commonly described by the given adjective using the Datamuse API.
 
