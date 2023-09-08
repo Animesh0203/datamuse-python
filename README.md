@@ -1,17 +1,39 @@
+# Library Documentation
+
+If you encounter any problems or have suggestions for improvement while using this library, we kindly request that you open an issue on our GitHub repository. Your feedback is invaluable in helping us enhance the quality and functionality of the library. Please feel free to describe the issue in detail, including any relevant information, steps to reproduce, or expected behavior. We appreciate your contribution to making this library better for all users. Thank you.
+
 # Function Documentation
 
-## related_word_with_different_letter_suffix
-Retrieves words related to a base word with a specific suffix using the Datamuse API.
+## getAdjectiveByRelation
+Retrieves adjectives related to a given noun within specific topics using the Datamuse API.
 
 **Args:**
-- `word1` (str): The base word to find related words for.
-- `word` (str): The desired suffix for related words.
+- `word1` (str): The noun for which you want to find related adjectives.
+- `word` (str): The topics to consider for related adjectives.
 
 **Returns:**
-- `str`: A space-separated string of related words.
+- `str`: A space-separated string of related adjectives.
 
-## nouns_described_by_adjective
-Retrieves nouns that are commonly described by a given adjective using the Datamuse API.
+## getWordSpelledSimilar
+Retrieves words that are spelled similarly to a given word using the Datamuse API.
+
+**Args:**
+- `word` (str): The word to find similar spellings for.
+
+**Returns:**
+- `str`: A space-separated string of words with similar spellings.
+
+## getWordsThatSoundSimilar
+Retrieves words that sound similar to a given word using the Datamuse API.
+
+**Args:**
+- `word` (str): The word to find words that sound similar to.
+
+**Returns:**
+- `str`: A space-separated string of words that sound similar.
+
+## nouns_described_by_adjective (Deprecated)
+Retrieves nouns commonly described by a given adjective using the Datamuse API.
 
 **Args:**
 - `adjective` (str): The adjective to find associated nouns for.
@@ -19,46 +41,20 @@ Retrieves nouns that are commonly described by a given adjective using the Datam
 **Returns:**
 - `str`: A space-separated string of associated nouns.
 
-## words_following_in_sentence
-Retrieves words that follow a base word in a sentence and start with a specific prefix using the Datamuse API.
+**Note:**
+This function is deprecated. Please use 'getNounsMatchingAdjective' instead.
+
+## getNounsMatchingAdjective
+Retrieves nouns commonly described by the given adjective using the Datamuse API.
 
 **Args:**
-- `base_word` (str): The base word to find following words for.
-- `prefix` (str): The desired prefix for following words.
+- `adjective` (str): The adjective to find associated nouns for.
 
 **Returns:**
-- `str`: A space-separated string of following words.
+- `str`: A space-separated string of associated nouns.
 
-## words_following_with_suffix
-Retrieves words that follow a base word in a sentence and end with a specific suffix using the Datamuse API.
-
-**Args:**
-- `base_word` (str): The base word to find following words for.
-- `suffix` (str): The desired suffix for following words.
-
-**Returns:**
-- `str`: A space-separated string of following words.
-
-## words_triggered_by_association
-Retrieves words triggered by association with a given word using the Datamuse API.
-
-**Args:**
-- `word1` (str): The word to find associated words for.
-
-**Returns:**
-- `str`: A space-separated string of associated words.
-
-## suggestions_for_input
-Retrieves word suggestions based on an input word using the Datamuse API.
-
-**Args:**
-- `word1` (str): The input word to get suggestions for.
-
-**Returns:**
-- `str`: A space-separated string of suggested words.
-
-## related_word_with_different_letter_prefix
-Retrieves words related to a base word with a specific prefix using the Datamuse API.
+## getWordWithDifferentPrefix
+Retrieves words related to 'word1' that have a specific 'word' prefix using the Datamuse API.
 
 **Args:**
 - `word1` (str): The base word to find related words for.
@@ -67,49 +63,29 @@ Retrieves words related to a base word with a specific prefix using the Datamuse
 **Returns:**
 - `str`: A space-separated string of related words.
 
-## related_word_different_letter
-Retrieves words related to a base word with a different letter using the Datamuse API.
+## getWordWithDifferentSuffix
+Retrieves words related to 'word1' that have a specific 'word' suffix using the Datamuse API.
 
 **Args:**
 - `word1` (str): The base word to find related words for.
-- `word` (str): The desired related word with a different letter.
+- `word` (str): The desired suffix for related words.
 
 **Returns:**
 - `str`: A space-separated string of related words.
 
-## related_word
-Retrieves words related to a base word with specific letters and another word using the Datamuse API.
+## getWordWithCertainAmountOfLetters
+Retrieves words with a specific number of letters that combine 'word1', 'letters', and 'word2' using the Datamuse API.
 
 **Args:**
-- `word1` (str): The base word to find related words for.
-- `letters` (str): Specific letters to be included in related words.
-- `word2` (str): The associated word.
+- `word1` (str): The first part of the word.
+- `letters` (str): The specific letters to include.
+- `word2` (str): The second part of the word.
 
 **Returns:**
-- `str`: A space-separated string of related words.
+- `str`: A space-separated string of words with the specified letters and format.
 
-## related_word_with_letters
-Retrieves words related to a base word with specific letters and another word using the Datamuse API.
-
-**Args:**
-- `word1` (str): The base word to find related words for.
-- `letters` (str): Specific letters to be included in related words.
-- `word2` (str): The associated word.
-
-**Returns:**
-- `str`: A space-separated string of related words.
-
-## rythming_word
-Retrieves words that rhyme with a given word using the Datamuse API.
-
-**Args:**
-- `word1` (str): The word to find rhyming words for.
-
-**Returns:**
-- `str`: A space-separated string of rhyming words.
-
-## rhyming_words_related_to_base_word
-Retrieves words that rhyme with a given word and are related to a base word using the Datamuse API.
+## getRhymingWords
+Retrieves words that rhyme with 'rhyming_word' and are related to 'base_word' using the Datamuse API.
 
 **Args:**
 - `base_word` (str): The base word to find related rhyming words for.
@@ -118,39 +94,49 @@ Retrieves words that rhyme with a given word and are related to a base word usin
 **Returns:**
 - `str`: A space-separated string of related rhyming words.
 
-## rwords_that_describe_adjectives
-Retrieves words that are commonly used to describe adjectives using the Datamuse API.
+## getWordRythm
+Retrieves words that rhyme with a given word using the Datamuse API.
 
 **Args:**
-- `word1` (str): The word to find describing words for.
+- `word1` (str): The word to find rhyming words for.
+
+**Returns:**
+- `str`: A space-separated string of rhyming words.
+
+## getWordSuggestions
+Retrieves word suggestions based on an input word using the Datamuse API.
+
+**Args:**
+- `word1` (str): The input word to get suggestions for.
+
+**Returns:**
+- `str`: A space-separated string of suggested words.
+
+## getWordThatFollowWord
+Retrieves words that follow 'base_word' in a sentence and start with the specified 'prefix' using the Datamuse API.
+
+**Args:**
+- `base_word` (str): The base word to find following words for.
+- `prefix` (str): The desired prefix for following words.
+
+**Returns:**
+- `str`: A space-separated string of following words.
+
+## getWordThatDescribesAdjective
+Retrieves words that commonly describe the given adjective using the Datamuse API.
+
+**Args:**
+- `word1` (str): The adjective to find associated describing words for.
 
 **Returns:**
 - `str`: A space-separated string of describing words.
 
-## related_word_with_topics
-Retrieves words related to a given word within specific topics using the Datamuse API.
+## getWordTriggeredByAssociation
+Retrieves words triggered by association with a given word using the Datamuse API.
 
 **Args:**
-- `word1` (str): The word to find related words for.
-- `word2` (str): The topics to consider for related words.
+- `word1` (str): The word to find associated words for.
 
 **Returns:**
-- `str`: A space-separated string of related words.
+- `str`: A space-separated string of associated words.
 
-## beautify_json
-Beautifies JSON data by adding indentation for improved readability.
-
-**Args:**
-- `data` (str): The JSON data to be beautified.
-
-**Returns:**
-- `str`: Beautified JSON data.
-
-## remove_tags
-Removes HTML tags from a given word using the Datamuse API.
-
-**Args:**
-- `word` (str): The word containing HTML tags.
-
-**Returns:**
-- `str`: The word with tags removed.

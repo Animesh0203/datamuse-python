@@ -2,9 +2,10 @@ README.md
 setup.py
 datamuse-python/__init__.py
 datamuse-python/beautify_json.py
+datamuse-python/getAdjectivesByRelation.py
+datamuse-python/getWordSpelledSimilar.py
+datamuse-python/getWordsThatSoundSimilar.py
 datamuse-python/nouns_described_by_adjective.py
-datamuse-python/related_word.py
-datamuse-python/related_word_different_letter.py
 datamuse-python/related_word_with_different_letter_prefix.py
 datamuse-python/related_word_with_different_letter_suffix.py
 datamuse-python/related_word_with_letters.py
