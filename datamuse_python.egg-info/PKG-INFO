@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: datamuse-python
-Version: 1.3.3
+Version: 1.4.8
 Summary: A collection of functions using the Datamuse API.
 Home-page: https://github.com/Animesh0203/datamuse-python
 Author: Animesh Srivastava
@@ -12,6 +12,13 @@ Description-Content-Type: text/markdown
 If you encounter any problems or have suggestions for improvement while using this library, we kindly request that you open an issue on our GitHub repository. Your feedback is invaluable in helping us enhance the quality and functionality of the library. Please feel free to describe the issue in detail, including any relevant information, steps to reproduce, or expected behavior. We appreciate your contribution to making this library better for all users. Thank you.
 
 # Function Documentation
+
+# To Use The Library
+
+```python
+from datamusepython import DatamusePython
+print(DatamusePython.{function})
+```
 
 ## getAdjectiveByRelation
 Retrieves adjectives related to a given noun within specific topics using the Datamuse API.

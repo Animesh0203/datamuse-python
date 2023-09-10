@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 setup(
     name="datamuse-python",
-    version="1.3.3",
+    version="1.4.8",
     description="A collection of functions using the Datamuse API.",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -13,9 +13,8 @@ setup(
     author_email="animeshsrivastava2003@email.com",
     packages=find_packages(),
     install_requires=[
-        "requests",
-        "beautifulsoup4",
-        "json"
+        'requests>=2.0.0',
+        'beautifulsoup4>=4.0.0',
     ],
     url='https://github.com/Animesh0203/datamuse-python',
 )

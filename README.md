@@ -4,6 +4,13 @@ If you encounter any problems or have suggestions for improvement while using th
 
 # Function Documentation
 
+# To Use The Library
+
+```python
+from datamusepython import DatamusePython
+print(DatamusePython.{function})
+```
+
 ## getAdjectiveByRelation
 Retrieves adjectives related to a given noun within specific topics using the Datamuse API.
 
