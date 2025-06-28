@@ -1,3 +1,4 @@
+[![PyPI Downloads](https://static.pepy.tech/badge/datamuse-python)](https://pepy.tech/projects/datamuse-python)
 # Library Documentation
 
 If you encounter any problems or have suggestions for improvement while using this library, we kindly request that you open an issue on our GitHub repository. Your feedback is invaluable in helping us enhance the quality and functionality of the library. Please feel free to describe the issue in detail, including any relevant information, steps to reproduce, or expected behavior. We appreciate your contribution to making this library better for all users. Thank you.
